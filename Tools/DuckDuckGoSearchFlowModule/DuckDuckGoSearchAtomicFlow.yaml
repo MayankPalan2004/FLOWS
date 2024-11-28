@@ -1,0 +1,5 @@
+name: DuckDuckGoSearch
+description: A Flow that takes in a query and searches it on duck duck go
+_target_: DuckDuckGoSearchFlowModule.DuckDuckGoSearchAtomicFlow.DuckDuckGoSearchAtomicFlow.instantiate_from_default_config
+input_interface: query
+output_interface: answer
