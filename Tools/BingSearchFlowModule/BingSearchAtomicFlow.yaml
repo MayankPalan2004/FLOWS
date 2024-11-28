@@ -1,0 +1,7 @@
+name: BingSearch
+description: A Flow that performs web, image, video, and news searches using the Bing
+  Search API
+_target_: BingSearchFlowModule.BingSearchAtomicFlow.BingSearchAtomicFlow.instantiate_from_default_config
+input_interface: query
+output_interface: results
+API_KEY: UBaT3MZoTsvcbQkKVuu9Ox4c3viVzQUCH1rDEVZAEtVU300Mi4kNzPyiuRfi
