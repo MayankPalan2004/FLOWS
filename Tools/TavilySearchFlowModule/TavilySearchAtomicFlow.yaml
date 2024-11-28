@@ -3,4 +3,4 @@ description: A Flow that takes in a query and searches it on the web
 _target_: TavilySearchFlowModule.TavilySearchAtomicFlow.TavilySearchAtomicFlow.instantiate_from_default_config
 input_interface: query
 output_interface: answer
-API_KEY: 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
+API_KEY: ???
