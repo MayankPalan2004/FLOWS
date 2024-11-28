@@ -1,0 +1,6 @@
+name: ArxivSearch
+description: A Flow that searches for articles on arXiv using specified query and
+  filters.
+_target_: ArxivSearchFlowModule.ArxivSearchAtomicFlow.ArxivSearchAtomicFlow.instantiate_from_default_config
+input_interface: query
+output_interface: results
