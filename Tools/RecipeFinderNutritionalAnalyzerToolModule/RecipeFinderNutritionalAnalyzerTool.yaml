@@ -1,0 +1,7 @@
+name: RecipeFinderNutritionalAnalyzerTool
+description: A tool for finding recipes based on ingredients and analyzing nutritional
+  information.
+_target_: RecipeFinderNutritionalAnalyzerToolModule.RecipeFinderNutritionalAnalyzerTool.RecipeFinderNutritionalAnalyzerTool.instantiate_from_default_config
+input_interface: ingredients
+output_interface: data
+API_KEY: ''
