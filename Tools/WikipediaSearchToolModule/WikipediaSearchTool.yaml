@@ -1,0 +1,5 @@
+name: WikipediaSearchTool
+description: A tool to perform searches on Wikipedia for summaries or full content.
+_target_: WikipediaSearchToolModule.WikipediaSearchTool.WikipediaSearchTool.instantiate_from_default_config
+input_interface: query
+output_interface: data
