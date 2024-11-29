@@ -1,0 +1,8 @@
+name: RedditSearchTool
+description: A tool to perform searches on Reddit for posts and comments.
+_target_: RedditSearchToolModule.RedditSearchTool.RedditSearchTool.instantiate_from_default_config
+input_interface: query
+output_interface: data
+CLIENT_ID: ???
+CLIENT_SECRET: ???
+USER_AGENT: Your-User-Agent
