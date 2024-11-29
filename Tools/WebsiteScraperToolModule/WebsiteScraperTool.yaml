@@ -1,0 +1,5 @@
+name: WebsiteScraperTool
+description: A tool for scraping website content based on specified sections.
+_target_: WebsiteScraperToolModule.WebsiteScraperTool.WebsiteScraperTool.instantiate_from_default_config
+input_interface: website_url
+output_interface: data

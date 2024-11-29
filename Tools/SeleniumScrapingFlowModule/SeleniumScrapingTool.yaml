@@ -1,0 +1,5 @@
+name: SeleniumScrapingTool
+description: A tool for scraping content from websites using CSS selectors with Selenium.
+_target_: SeleniumScrapingFlowModule.SeleniumScrapingTool.SeleniumScrapingTool.instantiate_from_default_config
+input_interface: website_url
+output_interface: data
