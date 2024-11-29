@@ -1,0 +1,5 @@
+name: StackExchangeSearchTool
+description: A tool to perform searches on Stack Exchange sites like Stack Overflow.
+_target_: StackExchangeSearchToolModule.StackExchangeSearchTool.StackExchangeSearchTool.instantiate_from_default_config
+input_interface: query
+output_interface: data
