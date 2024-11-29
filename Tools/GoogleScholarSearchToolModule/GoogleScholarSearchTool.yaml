@@ -1,0 +1,6 @@
+name: GoogleScholarSearchTool
+description: A tool to perform searches on Google Scholar for academic papers.
+_target_: GoogleScholarSearchToolModule.GoogleScholarSearchTool.GoogleScholarSearchTool.instantiate_from_default_config
+input_interface: query
+output_interface: data
+API_KEY: ???
