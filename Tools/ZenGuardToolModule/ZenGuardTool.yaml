@@ -1,0 +1,7 @@
+name: ZenGuardTool
+description: A tool to check prompts for security risks and sanitize them using ZenGuard
+  AI.
+_target_: ZenGuardToolModule.ZenGuardTool.ZenGuardTool.instantiate_from_default_config
+input_interface: prompt
+output_interface: status
+API_KEY: ''
