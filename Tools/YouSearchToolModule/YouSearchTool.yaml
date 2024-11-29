@@ -1,6 +1,0 @@
-name: YouSearchTool
-description: A tool to perform web, image, and news searches using the You.com API.
-_target_: YouSearchToolModule.YouSearchTool.YouSearchTool.instantiate_from_default_config
-input_interface: query
-output_interface: data
-API_KEY: Your-You-API-Key
