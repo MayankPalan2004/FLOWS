@@ -1,0 +1,5 @@
+name: PubMedSearchTool
+description: A tool to perform searches on PubMed for biomedical articles.
+_target_: PubMedSearchToolModule.PubMedSearchTool.PubMedSearchTool.instantiate_from_default_config
+input_interface: query
+output_interface: data
