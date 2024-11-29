@@ -3,4 +3,4 @@ description: A tool to query Wolfram|Alpha for computational knowledge.
 _target_: WolframAlphaToolModule.WolframAlphaTool.WolframAlphaTool.instantiate_from_default_config
 input_interface: query
 output_interface: data
-APP_ID: 
+APP_ID: ??
