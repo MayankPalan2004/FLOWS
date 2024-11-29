@@ -1,0 +1,6 @@
+name: WeatherActivitySuggestionTool
+description: A tool to suggest activities based on weather conditions.
+_target_: WeatherActivitySuggestionToolModule.WeatherActivitySuggestionTool.WeatherActivitySuggestionTool.instantiate_from_default_config
+input_interface: location
+output_interface: data
+API_KEY: ??
