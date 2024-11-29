@@ -1,0 +1,7 @@
+name: GoogleLensTool
+description: A tool for performing image analysis using Google Cloud Vision API, similar
+  to Google Lens.
+_target_: GoogleLensToolModule.GoogleLensTool.GoogleLensTool.instantiate_from_default_config
+input_interface: image_path
+output_interface: data
+API_KEY: ??
