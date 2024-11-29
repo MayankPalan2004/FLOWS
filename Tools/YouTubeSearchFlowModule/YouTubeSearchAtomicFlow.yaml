@@ -1,0 +1,6 @@
+name: YouTubeSearch
+description: A Flow that searches YouTube for videos using specified query and options.
+_target_: YouTubeSearchFlowModule.YouTubeSearchAtomicFlow.YouTubeSearchAtomicFlow.instantiate_from_default_config
+input_interface: query
+output_interface: results
+API_KEY: ???
