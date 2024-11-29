@@ -1,0 +1,7 @@
+name: StockMarketInsightsTool
+description: A tool for retrieving and analyzing stock market data, including price
+  trends and technical indicators.
+_target_: StockMarketInsightsToolModule.StockMarketInsightsTool.StockMarketInsightsTool.instantiate_from_default_config
+input_interface: symbol
+output_interface: data
+API_KEY: ??
