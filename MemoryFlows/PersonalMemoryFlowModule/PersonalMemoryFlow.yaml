@@ -17,7 +17,7 @@ vector_backend:
   api_infos:
   - _target_: aiflows.backends.api_info.ApiInfo
     backend_used: cohere
-    api_key: nk-Bk1dpxBqP9_ozAoTAwredzaeuy2WBkpi06AGouKkKoU
+    api_key: 
     api_base: null
   model_name: ''
 collection_name: perrsonall_me5458m3j5758r54556k676o57564ry_collection
