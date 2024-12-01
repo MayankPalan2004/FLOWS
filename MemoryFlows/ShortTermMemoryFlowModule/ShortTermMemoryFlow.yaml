@@ -1,0 +1,165 @@
+_target_: ShortTermMemoryFlowModule.ShortTermMemoryFlow.ShortTermMemoryFlow.instantiate_from_default_config
+name: ShortTermMemoryFlow
+description: Flow that maintains a running context for short-term memory.
+backend:
+  _target_: aiflows.backends.llm_lite.LiteLLMBackend
+  api_infos: ???
+  model_name:
+    groq: groq/llama3-70b-8192
+  'n': 1
+  max_tokens: 1500
+  temperature: 0.7
+  top_p: 0.9
+  stream: false
+update_prompt_template:
+  _target_: aiflows.prompt_template.JinjaPrompt
+  template: '
+
+    You are an expert memory assistant, tasked with creating accurate, participant-specific
+    memory entries. Each entry should:
+
+    - Clearly tag key topics such as **Themes, Setup, Preparation, Activities**, etc.
+
+    - Be succinct but capture essential details for future reference.
+
+    - Ensure that entries on distinct topics are separated clearly for effective categorization.
+
+
+    #### Examples
+
+
+    **Example 1:**
+
+    Conversation:
+
+    - User: I’ve been wanting to explore new hiking trails this year.
+
+    - Friend: I have a few in mind! Let’s start planning.
+
+
+    Memory Entries:
+
+    - **Activity**: User wants to explore new hiking trails this year.
+
+    - **Activity**: Friend has suggested planning hikes together.
+
+
+    **Example 2:**
+
+    Conversation:
+
+    - User: I think having a cozy cabin stay would add to the experience.
+
+    - Friend: That’s perfect! I know a few near the trails we like.
+
+
+    Memory Entries:
+
+    - **Accommodation**: User prefers a cozy cabin stay to enhance the experience.
+
+    - **Accommodation**: Friend agrees with the cabin idea and has some in mind.
+
+
+    Now, categorize each new piece of content into concise memory entries, tagged
+    with relevant topics.
+
+
+    Current Running Context:
+
+    {{running_context}}
+
+
+    New Message:
+
+    {{new_message}}
+
+
+    Memory Entries:
+
+    '
+  input_variables:
+  - running_context
+  - new_message
+fetch_prompt_template:
+  _target_: aiflows.prompt_template.JinjaPrompt
+  template: '
+
+    You are a memory retrieval assistant tasked with finding memories relevant to
+    both direct and related themes in multi-participant conversations. For each query:
+
+    - Retrieve memories tagged with topics that are either directly or conceptually
+    related to the query.
+
+    - Prioritize entries with high relevance to the query subject (e.g., “themes”
+    should capture topics related to art, creativity, and project ideas).
+
+
+    #### Examples
+
+
+    **Example 1:**
+
+    Query: What themes have we discussed?
+
+    Running Context:
+
+    - **Activity**: User has started painting landscapes as a form of relaxation.
+
+    - **Project**: Friend suggested working on a collaborative art project.
+
+    - **Supplies**: User has acrylic paint sets and large canvases available.
+
+    - **Setup**: They discussed working outside to leverage natural light.
+
+
+    Relevant Memories:
+
+    - **Activity**: User has started painting landscapes as a form of relaxation.
+
+    - **Project**: Friend suggested working on a collaborative art project.
+
+
+    **Example 2:**
+
+    Query: What setup did we discuss for the project?
+
+    Running Context:
+
+    - **Activity**: User has started painting landscapes.
+
+    - **Project**: They are planning a weekend project for art.
+
+    - **Setup**: They discussed using User’s studio or setting up outside for natural
+    light.
+
+
+    Relevant Memories:
+
+    - **Setup**: They discussed using User’s studio or setting up outside for natural
+    light.
+
+
+    Now, based on the query below, retrieve memory entries that match the subject,
+    including conceptually related themes.
+
+    Give only the memories directly, donot give reasoning, although you should reason
+    well, but donot include it in output
+
+
+    Query:
+
+    {{query}}
+
+
+    Running Context:
+
+    {{running_context}}
+
+
+    Relevant Memories:
+
+    '
+  input_variables:
+  - running_context
+  - query
+  - participant
