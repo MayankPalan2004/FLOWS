@@ -74,11 +74,11 @@ vector_backend:
   api_infos:
   - _target_: aiflows.backends.api_info.ApiInfo
     backend_used: nomic
-    api_key: nk-Bk1dpxBqP9_ozAoTAwredzaeuy2WBkpi06AGouKkKoU
+    api_key: 
     api_base: null
   model_name: ''
 graph_config:
   provider: neo4j
-  uri: neo4j+s://b344f2e5.databases.neo4j.io
+  uri: 
   user: neo4j
-  password: QqOeeksrY4izSIIQ2wMGeUClY81QnEayAc7ltBmtW-k
+  password: 
