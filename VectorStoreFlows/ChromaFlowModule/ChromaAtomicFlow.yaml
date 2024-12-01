@@ -1,0 +1,22 @@
+name: chroma_db
+_target_: ChromaFlowModule.ChromaAtomicFlow.ChromaDBFlow.instantiate_from_default_config
+description: ChromaDB is a document store that uses vector embeddings to store and retrieve documents
+backend:
+  _target_: aiflows.backends.llm_lite.LiteLLMBackend
+  api_infos: ???
+  model_name: ''
+similarity_search_kwargs:
+  k: 2
+  filter: null 
+input_interface:
+- operation
+- content
+output_interface:
+- retrieved
+paths_to_data: []
+collection_name: default_collection
+chunk_size: 700
+chunk_overlap: 0
+separator: "\n"
+persist_directory: ./demo_dbr_dir
+filters: [created_at]
