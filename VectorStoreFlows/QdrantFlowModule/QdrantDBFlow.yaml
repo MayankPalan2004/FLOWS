@@ -1,0 +1,29 @@
+name: qdrant_db
+_target_: QdrantFlowModule.QdrantAtomicFlow.QdrantDBFlow.instantiate_from_default_config
+description: QdrantDB is a vector database that uses embeddings to store and retrieve
+  documents
+backend:
+  _target_: aiflows.backends.llm_lite.LiteLLMBackend
+  api_infos: ???
+  model_name: ''
+  api_key: lPnUl0fYhomPVfHFHbVepb8JLrUDN6A0aItqIrkLL-HNjCfvlv6aVA
+  url: https://c71ef345-d7cf-467b-9a24-7b08ed129cf5.us-east4-0.gcp.cloud.qdrant.io:6333
+  on_disk: false
+similarity_search_kwargs:
+  k: 2
+  filter: null
+input_interface:
+- operation
+- content
+output_interface:
+- retrieved
+paths_to_data: []
+collection_name: default_collection
+chunk_size: 700
+chunk_overlap: 0
+separator: '
+
+  '
+embedding_model_dims: 1024
+filters:
+- created_at
