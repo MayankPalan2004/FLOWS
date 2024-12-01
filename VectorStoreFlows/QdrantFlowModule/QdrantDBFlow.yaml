@@ -6,8 +6,8 @@ backend:
   _target_: aiflows.backends.llm_lite.LiteLLMBackend
   api_infos: ???
   model_name: ''
-  api_key: lPnUl0fYhomPVfHFHbVepb8JLrUDN6A0aItqIrkLL-HNjCfvlv6aVA
-  url: https://c71ef345-d7cf-467b-9a24-7b08ed129cf5.us-east4-0.gcp.cloud.qdrant.io:6333
+  api_key: 
+  url:
   on_disk: false
 similarity_search_kwargs:
   k: 2
