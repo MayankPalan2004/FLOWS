@@ -15,15 +15,15 @@ llm_backend:
 username: neo4j
 graph_config:
   provider: neo4j
-  uri: neo4j+s://b344f2e5.databases.neo4j.io
+  uri: 
   user: neo4j
-  password: QqOeeksrY4izSIIQ2wMGeUClY81QnEayAc7ltBmtW-k
+  password: 
 vector_backend:
   _target_: aiflows.backends.llm_lite.LiteLLMBackend
   api_infos:
   - _target_: aiflows.backends.api_info.ApiInfo
     backend_used: cohere
-    api_key: pDh1uZew8kxZ651PjUX7oCDhFSFwKhFDfCwWZLwJ
+    api_key: 
     api_base: null
   model_name: ''
 collection_name: perrsonall_me5458m3j578r54556k676o57564ry_collection
