@@ -1,7 +1,4 @@
 # FLOWS
-# FLOWS
-
-FLOWS is a comprehensive framework designed for developing advanced memory architectures, personalized AI flows, and vector store integrations. This repository incorporates innovative solutions for both short-term and long-term memory management, alongside cutting-edge tools and research in Retrieval-Augmented Generation (RAG).
 
 ## Table of Contents
 
